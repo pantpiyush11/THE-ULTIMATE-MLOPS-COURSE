@@ -25,3 +25,7 @@
 
 10. Now we make changes to mycode.py file to append a new row in data, check changes via "dvc staus".
 
+11. Again - - "dvc commit" and "dvc push"
+
+12. Then git add-commit-push ("we are saving V2 of our Data at this point")
+
