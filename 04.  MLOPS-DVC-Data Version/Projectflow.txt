@@ -1,6 +1,22 @@
 1. Create a github repo and clone it in local
+
 2. Create mycode.py and add code to it.(it will dave new csv file to new "data" folder)
+
 3. Do add git add-commit-push before initialising DVC.
 
 # if you haven't used DVC before run " pip install DVC"
 
+4. we run "dvc init" whixh will create (.dvcignire and .dvc) folders. You also need to show dvc the drectory where data versions need to be saved
+
+5. now make "mkdir S3" (creates a new S3 directory)
+
+6. Tell DVC remote origin kaha pe hai. Now we do "dvc remote add -d myremote S3"
+
+7. Next "dvc add data/", Here we are telling dvc you are responsible for versioning data inside given folder which is data.
+
+   agar aap ek specific csv file hi track krwana chahte ho too "data/filenname" bhi add karo.
+
+   now it will ask to do:("git rm -r --cached 'data'" and "git commit - m "stop tracking  data"")
+   Because initially we were tracking data/ folder from git so now e remove it for dvc to handle
+
+8. Again we do "dvc add data/"(creates .dvc)  then we run "git add .gitignore data.dvc" 
