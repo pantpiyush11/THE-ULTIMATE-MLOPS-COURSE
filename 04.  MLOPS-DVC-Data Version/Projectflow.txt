@@ -20,3 +20,8 @@
    Because initially we were tracking data/ folder from git so now e remove it for dvc to handle
 
 8. Again we do "dvc add data/"(creates .dvc)  then we run "git add .gitignore data.dvc" 
+
+9. Do git add commit push
+
+10. Now we make changes to mycode.py file to append a new row in data, check changes via "dvc staus".
+
